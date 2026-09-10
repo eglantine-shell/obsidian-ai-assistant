@@ -99,11 +99,15 @@
 
 归档新产出后：
 
-1. 确认 provenance 和实际贡献；
-2. 决定全文、record / pointer 或不长期保留；
-3. 更新 project / output index；
-4. 判断它是普通新增还是改变了已有实践理解；
-5. 不从单个新成果直接升级整体能力等级。
+1. 先确认 project-level provenance：独立、团队、AI-assisted 或 unknown；
+2. 如果某个具体 artifact / action 将被用于能力判断，再确认 contribution-level provenance：谁 initiated、specified、authored / generated、edited、reviewed、approved、integrated 或 maintained；
+3. 无法确认的具体贡献保留 unknown，不因为项目属于用户就默认归给用户；
+4. 决定全文、record / pointer 或不长期保留；
+5. 更新 project / output index；
+6. 判断它是普通新增还是改变了已有实践理解；
+7. 不从单个新成果直接升级整体能力等级。
+
+不需要对项目内所有小文件做逐项审计。只有当某个具体动作会进入 synthesis 或能力 claim 时，才需要继续细化 provenance。
 
 ## 6. 新用户自述的维护
 
@@ -158,6 +162,7 @@
 - 是否把某个职业 / 当前项目误写成核心身份；
 - 是否有用户观点已经过时；
 - AI-assisted output 是否被错误当成独立能力；
+- 是否把 AI / 团队生成的具体 artifact、规则、代码、文档或决策，仅因存在于用户项目里就错误归因给用户；
 - 是否出现大量重复 summary；
 - 是否有 corpus 边界已经不适合当前材料；
 - 是否长期保存了大量没有未来用途的噪声材料。
@@ -171,6 +176,6 @@ Audit 不需要固定频率，也不应该制造无意义维护工作。
 - 用户只负责把新材料交给 AI，或告诉 AI 一个可访问位置；
 - AI 自己完成已有 schema 下的分类、metadata、索引和 integration 检查；
 - 用户明确纠正可复用流程时，AI 负责判断应该写入哪个作用域的工作手册；
-- 只有真正存在歧义、重大语义变化或长期规则不明确时才向用户提问。
+- 只有真正存在歧义、重大语义变化、具体贡献会影响能力判断或长期规则不明确时才向用户提问。
 
 系统的价值之一，就是减少用户自己当档案管理员和“每次重新教 AI 一遍”的负担。
