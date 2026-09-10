@@ -38,6 +38,7 @@ Do not skip directly from raw files to a global profile.
 10. Most new evidence should not rewrite long-term understanding.
 11. Existing Vault ontology and explicit user instructions override this Skill's suggested structure.
 12. Never infer that recent or frequent activity is automatically the user's strongest ability, core identity, or stable preference.
+13. Project-level ownership or an `AI-assisted` label never substitutes for contribution-level provenance. Attribute specific skills only when the relevant user action is actually supported.
 
 ## Phase 1 — Discover available historical traces
 
@@ -95,6 +96,7 @@ Ask the user only about gaps that materially affect later understanding, such as
 
 - unexplained changes across time;
 - unclear authorship or contribution;
+- unclear contribution of specific artifacts or actions inside AI-assisted / team projects;
 - whether a repeated activity was interest, obligation, or temporary project work;
 - whether an old record still reflects the user's current view;
 - important capabilities or experiences missing from the available archive;
@@ -140,7 +142,9 @@ When possible:
 - keep large binary or code-heavy projects in their natural canonical location;
 - store an Obsidian output record pointing to that location;
 - record what the user actually did, completion state, date, result, and provenance when known;
-- distinguish independent work from AI-assisted work when this affects capability interpretation.
+- distinguish independent work from AI-assisted work when this affects capability interpretation;
+- for AI-assisted or team projects, distinguish project-level provenance from contribution-level provenance whenever a specific artifact or action may be used as capability evidence;
+- do not infer that the user initiated, specified, authored, edited, reviewed, approved, integrated, or maintained an artifact merely because it exists inside their project.
 
 Do not use an AI-generated summary as a replacement for an available original text.
 
@@ -162,6 +166,8 @@ A synthesis may describe:
 - changes over time;
 - contradictions and uncertainty;
 - what the corpus does not establish.
+
+For every capability claim derived from collaborative outputs, confirm that the underlying evidence supports the user's specific contribution rather than merely project ownership, artifact presence, or overall project success.
 
 Do not turn each corpus into a complete personality model.
 
@@ -226,7 +232,10 @@ bought / downloaded ≠ consumed
 consumed ≠ understood in full
 high rating ≠ stable preference
 one output ≠ global capability
-AI-assisted output ≠ independent production ability
+AI-assisted project ≠ user performed every project action
+project ownership ≠ authorship of internal artifacts
+artifact exists in user's repo ≠ user initiated / specified / authored / reviewed it
+approval / acceptance ≠ independent authorship
 paid work ≠ personal interest
 recent activity ≠ long-term identity
 absence of records ≠ absence of ability or interest
@@ -245,6 +254,8 @@ When the user explains old material retrospectively, preserve the distinction be
 
 - historical original evidence;
 - later user recollection or reinterpretation.
+
+For collaborative outputs, ask about specific contribution only when that distinction would materially affect later capability interpretation. Unknown is preferable to invented attribution.
 
 ## Suggested minimal Vault layers
 
@@ -267,6 +278,7 @@ The system is working when a new AI session can:
 - find relevant historical context without reading everything;
 - distinguish raw evidence from interpretation;
 - understand the user's actual inputs and outputs with provenance boundaries;
+- distinguish project-level collaboration from the user's specific contribution to important artifacts or actions;
 - know the established rules for how to continue familiar work;
 - ask for clarification only where the archive is genuinely ambiguous;
 - recover long-term patterns without overfitting to recent activity;
