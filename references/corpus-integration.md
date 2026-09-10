@@ -39,6 +39,8 @@ Corpus integration 是把一批相关 evidence 变成 AI 可长期复用的综�
 
 > 这批材料显示用户长期持续进行包装设计，并在多个项目中独立完成从视觉概念到成品的设计工作。
 
+前提是“独立完成”本身有直接 evidence。
+
 过度：
 
 > 设计是用户最强的能力。
@@ -53,7 +55,34 @@ Corpus integration 是把一批相关 evidence 变成 AI 可长期复用的综�
 
 Corpus synthesis 只能回答当前 corpus 能证明的问题。
 
-## 4. 保留时间结构
+## 4. 能力判断必须服从 contribution provenance
+
+项目属于用户、项目由用户发起、项目使用了 AI、项目最后成功交付，这些都不能自动说明项目内部每个 artifact 或 action 是用户完成的。
+
+在 synthesis 中写“用户会 / 用户做过 / 用户擅长 X”前，反向检查：
+
+> 当前 evidence 是否真的证明 X 是用户完成的具体动作？
+
+尤其在 AI-assisted 或团队项目中，要区分：
+
+- 谁 initiated；
+- 谁 specified；
+- 谁 authored / generated；
+- 谁 edited；
+- 谁 reviewed；
+- 谁 approved；
+- 谁 integrated / executed；
+- 谁 maintained。
+
+这些角色不能互相替代。
+
+例如，项目里存在一份 AI 生成的约束文档，只能证明项目里有这份文档。除非有额外 evidence，否则不能写成“用户具有编写 AI 约束文档的能力”。
+
+如果 provenance 不足，写 unknown 或更弱的事实描述，不要用“项目 owner 通常会做这些事”来补全。
+
+详细规则见 `output-processing.md`。
+
+## 5. 保留时间结构
 
 如果早期和后期不同，直接写阶段变化，不要压成平均值。
 
@@ -67,7 +96,7 @@ Corpus synthesis 只能回答当前 corpus 能证明的问题。
 
 无法解释的变化保留为 unknown，不强行编成长叙事。
 
-## 5. 用户自述和 corpus evidence 可以并存
+## 6. 用户自述和 corpus evidence 可以并存
 
 用户可以直接说明自己的经历、能力或理解。Corpus evidence 用于补充范围、实践基础和边界，而不是给用户自述做资格审核。
 
@@ -77,7 +106,7 @@ Corpus synthesis 只能回答当前 corpus 能证明的问题。
 - 必要时通过访谈确认；
 - 不静默覆盖任何一方。
 
-## 6. 什么时候值得生成 synthesis
+## 7. 什么时候值得生成 synthesis
 
 适合生成综合报告的情况：
 
@@ -89,7 +118,7 @@ Corpus synthesis 只能回答当前 corpus 能证明的问题。
 
 只有一两条零散记录时，不必为了目录完整强行建报告。
 
-## 7. Cross-corpus 只在比较产生新理解时使用
+## 8. Cross-corpus 只在比较产生新理解时使用
 
 合理场景：
 
@@ -105,7 +134,7 @@ Corpus synthesis 只能回答当前 corpus 能证明的问题。
 
 跨 corpus 笔记只保存比较后新增的认识。
 
-## 8. 综合报告建议内容
+## 9. 综合报告建议内容
 
 不强制模板，但通常应包含：
 
@@ -113,17 +142,18 @@ Corpus synthesis 只能回答当前 corpus 能证明的问题。
 - 时间结构；
 - 主要稳定特征；
 - 实际实践 / 能力证据；
+- contribution provenance 和必要边界；
 - 变化；
 - 边界与反例；
 - 不确定性；
 - 必要的 evidence 回溯位置。
 
-## 9. 首轮与后续更新不同
+## 10. 首轮与后续更新不同
 
 首轮 integration 需要广泛阅读整个 corpus，建立基础理解。
 
 后续新 evidence 进入后，不要每次重写全文。先执行 `ongoing-maintenance.md` 的更新判断，只有真的改变结论时再改 synthesis。
 
-## 10. 完成标准
+## 11. 完成标准
 
-一份 synthesis 应该让未来 AI 在不重读全部原始文件的情况下，获得比“搜到几条最近记录”更准确的长期理解，同时清楚知道哪些结论没有被当前 corpus 支持。
+一份 synthesis 应该让未来 AI 在不重读全部原始文件的情况下，获得比“搜到几条最近记录”更准确的长期理解，同时清楚知道哪些结论没有被当前 corpus 支持，以及哪些项目内部贡献仍然是 unknown。
