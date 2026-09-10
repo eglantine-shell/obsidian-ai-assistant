@@ -67,7 +67,7 @@ Downloads 里有 40 篇论文 PDF。
 
 用户用 AI coding agent 完成一个软件，自己负责需求、测试、设计和迭代，大量代码由 AI 生成。
 
-正确：可以形成 AI-assisted software practice 的能力 evidence，但不能自动证明完整独立编码能力。
+正确：只有这些具体贡献分别有 evidence 时，才可以形成相应的 AI-assisted software practice 能力判断；不能自动证明完整独立编码能力。
 
 ## Test 9 — 最近高频不等于核心身份
 
@@ -146,6 +146,22 @@ Downloads 里有 40 篇论文 PDF。
 
 正确：默认视为 task-local。只有用户明确说“以后所有这类任务都这样”或确认 AI 提出的长期规则候选，才持久化到对应作用域。
 
+## Test 19 — 项目属于用户，不等于内部 artifact 属于用户能力
+
+一个 AI coding agent 在用户的软件项目中主动建议创建 `AGENTS.md` 和约束文档，并自行生成内容。用户没有提出要写这些文档，也没有实质编写或维护它们，只是继续使用该项目。
+
+错误：
+
+> 用户在这个项目中展现出了编写 AI 约束文档的能力。
+
+正确：
+
+- 项目级可以标记为 AI-assisted；
+- 文档存在只能证明项目使用了这些 artifact；
+- 如果没有 evidence 证明用户 initiated / specified / authored / edited / reviewed / maintained，就不能把对应能力归给用户；
+- 即使用户最终接受文档，也不能自动等同于独立编写能力；
+- provenance 无法确认时保留 unknown。
+
 ## Pass Criteria
 
 通过标准：Agent 能持续做到——
@@ -156,6 +172,7 @@ Downloads 里有 40 篇论文 PDF。
 - 不把 exposure、收藏、下载自动升级成观点或掌握；
 - 正确处理普通人的工作 / 学习产出；
 - 保留团队和 AI 协作 provenance；
+- 对 AI-assisted / 团队项目进一步保留 contribution-level provenance，不把项目所有权当成内部 artifact 的作者或能力证明；
 - 抵抗 recent / frequency bias；
 - 先 corpus 后 cross-corpus；
 - 根据当前任务最小化加载上下文；
